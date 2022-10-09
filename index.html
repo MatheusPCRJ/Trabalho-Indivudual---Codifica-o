@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cifra de Cesar</title>
+</head>
+<body>
+
+    <h2>Bem vindo a Codificação</h2>
+    <main>
+
+        <div class="lang-cifra">
+           <!--Sub-titulo-->
+            <lable id="msg-titulo" class="msg-titul">Qual linguagem você quer?</lable><br>
+
+            <!--minis-botões para escolher cesar ou 64-->
+            <div class="div-cesar">
+                <input type="radio" id="radio-cesar" value="radio-cesar">
+                <label for="radio-cesar"> Cifra de Cesar</label>
+            </div>
+            <div class="div-64">
+                <input type="radio" id="radio-64" value="radio-64">
+                <label for="radio-64"> Base64</label>
+            </div>
+
+            <!--titulo da input que escolhe as casas-->
+            <lable id="msg-titulo1">Para Cifra de Cesar escolha uma casa</lable><br>
+            <!--caixa que escolhe a quantidade-->
+            <input type="number" id="number-cesar" value="" min="1" max="26" placeholder="1 ao 26">
+        </div>
+
+        <!--Div que abrange toda mensagem/botões-->
+        <div class="codification">
+
+            <lable id="msg-titulo2">Mensagem: </lable><br>
+            <!--Caixa de texto que o usuario digita-->
+            <input type="text" id="text-codi" placeholder="Insira seu texto"><br>
+
+            <!--Botão para Codificação-->
+            <div class="radio-btn-cesar">
+                <input type="radio" id="codificar" value="codificar">
+                <label for="codificar">Codificar</label>
+            </div>
+            <!--Botão para decodificação-->
+            <div class="radio-btn-64">
+                <input type="radio" id="Decodificar" value="Decodificar">
+                <label for="Decodificar">Decodificar</label>
+            </div><br>
+
+            <!--Botão para confirmação-->
+            <button id="codificar-btn">Confirmar</button><br>
+
+            <lable id="msg-titulo">Mensagem: </lable><br>
+            <!--Resultado da codificação/decodificação-->
+            <input type="text" id="text-codi" placeholder="Resultado">
+
+        </div>
+
+    </main>
+
+
+    <script src="js/cifra.js"></script>
+</body>
+</html>
