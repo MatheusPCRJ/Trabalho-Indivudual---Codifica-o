@@ -25,16 +25,16 @@
 ou seja, se a letra for maiúscula, a resposta deve conter uma letra
 maiúscula incrementada e se for minúscula, uma minúscula. Ex: “Oi”
 com 2 de incremento vira “Qk”.
+
 <br>
 - Ter um texto descritivo contextualizando a pessoa usuária sobre o
 projeto apresentado e ensinando a usá-lo.
 <br>
 
 
-
 <h2 id="andamento">Andamento do projeto 📈</h2>
-
-  ![Badge](https://img.shields.io/website?down_message=offline&label=status&style=for-the-badge&up_color=g&up_message=concluido&url=https%3A%2F%2Fytallobruno.github.io%2FProjetoMensagemEscondida%2F)
+- Concluído
+<br>
 
 <h2 id="linguagens">Softwares & Ferramentas utilizadas nesse projeto 📚</h2>
 
