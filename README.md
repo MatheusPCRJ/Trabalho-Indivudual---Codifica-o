@@ -1,4 +1,4 @@
-# 2° Projeto Individual - Cidificações de Mensagens 🔐
+# 2° Projeto Individual - Codificações de Mensagens 🔐
 
 <div id="inicio" align=center>
   <a href="#sobre">Sobre</a>&nbsp;&nbsp;&nbsp;
