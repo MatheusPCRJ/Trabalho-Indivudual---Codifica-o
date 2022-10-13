@@ -2,11 +2,16 @@
 body{
     margin: 0;
     box-sizing: 0;
-    background-image: url(../img/imperador-augusto.png);
+    background-image: url(../img/giphy.gif);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    height: 94vh;
-    font-family: 'Merriweather', serif;
+    height: 100vh;
+    font-family: fontdafont;
+    color: white;
+}
+@font-face {
+    font-family: fontdafont;
+    src: url(../fonts/Typography.otf);
 }
 
 /* Tag main que pega todo conteudo principal */
@@ -16,17 +21,32 @@ main{
     justify-content: center;
     flex-direction: column;
 }
+.form-frm{
+    display: flex;
+    flex-direction: column;
+}
 
 /* Titulo do Bem-Vindo */
 h2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 50px;
 }
 /* titulo "Qual linguagem..*/
 #msg-titulo{
     font-size: 25px;
+   
+}
+.chooseCod{
+    margin-bottom: 30px;
+}
+.adicionando{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.codification-cdf, .lang-cifra, .form-frm, .mov-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .div-cesar{
@@ -41,9 +61,11 @@ h2{
 }
 #msg-titulo1{
     font-size: 25px;
+  
 }
 
-#number-cesar{
+#numberCesar{
+    display: flex;
     margin-top: 10px;
     padding: 5px;
     width: 100px;
@@ -55,33 +77,58 @@ h2{
 
 #msg-titulo2{
     font-size: 25px;
+    
 
 }
 
-/* caixa de mensagem, as duas caixas */
-#text-codi{
-    padding: min(10%, 60px);
+/* caixa de mensagem, entrada */
+#text-codi-entrada{
+    padding: min(5%, 60px);
     margin-top: 10px;
     margin-bottom: 15px;
     border-radius: 10px;
+    font-size: 15px;
+    background: #1f2521;
+    color: #b522b5;
+    font: message-box;
+    /* tag para retirar a alça de puxar o tamanho */
+    resize: none;
+}
+
+/* caixa de mensagem, resultado */
+#text-codi-saida{
+    padding: min(5%, 60px);
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    font-size: 15px;
+    background: #1f2521;
+    color: #b522b5;
+    font: message-box;
+    /* tag para retirar a alça de puxar o tamanho */
+    resize: none;
 }
 
 .radio-btn-cesar{
-    margin-bottom: 20px;
     font-size: 20px;
 }
 
 
 .radio-btn-64{
     font-size: 20px;
+    
+}
+.mov-btn{
+    display: flex;
+    justify-content: center;
 }
 
 /* Botão para codificação */
 #codificar-btn{
-    padding: 10px 50px 10px 50px;
+    padding: 10px 38px 10px 38px;
     border-radius: 20px;
     margin-bottom: 25px;
-    margin-left: 25px;
+    background: #b522b5;
 }
 
 @media only screen and (min-width: 768px){
@@ -98,28 +145,6 @@ h2{
     }
     #codificar-btn {
         padding: 10px 60px 10px 60px;
-        margin-left: 55px;
-    }
-}
-
-@media only screen and (min-width: 1024px){
-    main{
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-    .lang-cifra{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-    #text-codi {
-        padding: min(29%, 60px);
-    }
-    #codificar-btn {
-        padding: 10px 80px 10px 80px;
-        margin-left: 39px;
-    }
-    .div-64{
-        margin-bottom: 30%;
+       
     }
 }

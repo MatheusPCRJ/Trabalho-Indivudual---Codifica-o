@@ -5,60 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+   
     <title>Cifra de Cesar</title>
 </head>
+
 <body>
 
-    <h2>Bem vindo a Codificação</h2>
+    
     <main>
+        <form class="form-frm" name="formularioName"> 
+            <h2>Bem vindo a Codificação</h2>
+            <div class="lang-cifra">
+            <!--Sub-titulo-->
+                <lable id="msg-titulo" class="msg-titul">Qual codificação?</lable>
 
-        <div class="lang-cifra">
-           <!--Sub-titulo-->
-            <lable id="msg-titulo" class="msg-titul">Qual linguagem você quer?</lable><br>
 
-            <!--minis-botões para escolher cesar ou 64-->
-            <div class="div-cesar">
-                <input type="radio" id="radio-cesar" value="radio-cesar">
-                <label for="radio-cesar"> Cifra de Cesar</label>
+                <select name="chooseCod" class="chooseCod" id="escolherCod" required>
+                    <option disabled selected id="semValor">---</option>
+                    <!--As duas opções que seleciona cifra e base64-->
+                    <option value="radio-cesar" id="radio-cesar">Cifra de César</option>
+                    <option value="radio-64" id="radio-64">Base64</option>
+                </select>
+
+
+
+                <!--titulo da input que escolhe as casas-->
+                <div class="adicionando" style="display: none" id="addlista">
+                    <lable id="msg-titulo1">Escolha uma casa</lable>
+                    <!--caixa que escolhe a quantidade-->
+                    <input type="number" id="numberCesar" value="" min="0" max="25" placeholder="0 ao 25">
+                </div>
+
+
             </div>
-            <div class="div-64">
-                <input type="radio" id="radio-64" value="radio-64">
-                <label for="radio-64"> Base64</label>
+
+
+
+
+            <!--Div que abrange toda mensagem/botões-->
+            <div class="codification-cdf">
+
+                <lable id="msg-titulo2">Mensagem: </lable>
+                <!--Caixa de texto que o usuario digita-->
+                <textarea type="text" name="textoEntrada" id="text-codi-entrada" placeholder="Insira seu texto" value="" cols="25" rows="5"></textarea>
+
+                <!--Radio para Codificação-->
+                <div class="radio-btn-cesar">
+                    <input type="radio" id="codificar" value="codificar" name="codification">
+                    <label for="codificar">Codificar</label>
+                </div>
+                <!--Radio para decodificação-->
+                <div class="radio-btn-64">
+                    <input type="radio" id="Decodificar" value="Decodificar" name="codification">
+                    <label for="Decodificar">Decodificar</label>
+                </div><br>
+
+                <!--Botão para confirmação-->
+                <div class="mov-btn">
+                <button id="codificar-btn">Confirmar</button>
+                
+                
+                <lable id="msg-titulo">Resultado da Codificação: </lable>
+                <!--Resultado da codificação/decodificação-->
+                <textarea  type="text" id="text-codi-saida" placeholder="Resultado" cols="25" rows="5"></textarea>
             </div>
-
-            <!--titulo da input que escolhe as casas-->
-            <lable id="msg-titulo1">Para Cifra de Cesar escolha uma casa</lable><br>
-            <!--caixa que escolhe a quantidade-->
-            <input type="number" id="number-cesar" value="" min="1" max="26" placeholder="1 ao 26">
-        </div>
-
-        <!--Div que abrange toda mensagem/botões-->
-        <div class="codification">
-
-            <lable id="msg-titulo2">Mensagem: </lable><br>
-            <!--Caixa de texto que o usuario digita-->
-            <input type="text" id="text-codi" placeholder="Insira seu texto"><br>
-
-            <!--Botão para Codificação-->
-            <div class="radio-btn-cesar">
-                <input type="radio" id="codificar" value="codificar">
-                <label for="codificar">Codificar</label>
-            </div>
-            <!--Botão para decodificação-->
-            <div class="radio-btn-64">
-                <input type="radio" id="Decodificar" value="Decodificar">
-                <label for="Decodificar">Decodificar</label>
-            </div><br>
-
-            <!--Botão para confirmação-->
-            <button id="codificar-btn">Confirmar</button><br>
-
-            <lable id="msg-titulo">Mensagem: </lable><br>
-            <!--Resultado da codificação/decodificação-->
-            <input type="text" id="text-codi" placeholder="Resultado">
-
-        </div>
-
+            
+        </form>
     </main>
 
 
