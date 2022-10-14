@@ -13,14 +13,13 @@ x.addEventListener("change", function(evento){
         adicionar.style = "display: none";
     }
 });
+// Final do javascrip para escolher Cifra de Cesar e aparecer o campo.
 
 
 
-/* javascrip para mudar o nome do botao quando selecionado */
+// javascrip para mudar o nome do botao quando selecionado
 let botao = document.querySelectorAll('input[name="codification"]');
-
-
-botao.forEach(function(radio){
+botao.forEach((radio) => {
     radio.addEventListener("change", function(evento){
         evento.preventDefault();
 
@@ -35,22 +34,26 @@ botao.forEach(function(radio){
 
     })  
 });
+// final do js que muda o botão quando selecionado.
 
 
 
-let formulario = document.forms.formularioName;
+//Base de variaveis que seleciona a formação de cada input, botão e caixa de entra de msg.
+let formularioMae = document.querySelector("#formularioId");
 
-formulario.addEventListener("submit", function (evento) {
+formularioMae.addEventListener("submit", function (evento) {
     evento.preventDefault();
 
-    let writing = formulario.textoEntrada.value;
+    let writing = document.querySelector("#text-codi-entrada").value;
+    
+    let choiceCifraBase = document.querySelector("#escolherCod").value;
+   
+    // Coloquei dessa forma diferente para selecionar o name das duas IDs, pq eu selecionando
+    // as IDs me causa alguns erros. ("codification" são os nomes lá no html.)
+    let radiosCodeDecod = formularioMae.codification.value;
 
-    let choiceCifraBase = formulario.chooseCod.value;
-
-    let radiosCodeDecod = formulario.codification.value;
-
-    let houses = formulario.numberCesar.value;
-
+    let houses = document.querySelector("#numberCesar").value;
+    
     let finalMessage = "";
 
     if (choiceCifraBase == "radio-cesar"){
@@ -64,7 +67,7 @@ formulario.addEventListener("submit", function (evento) {
 });
 
 
-/*função do Cifra de Cesar */
+// Função do Cifra de Cesar.
 function cesar (writing, houses, radiosCodeDecod){
     houses = Number(houses);
 
@@ -84,18 +87,19 @@ function cesar (writing, houses, radiosCodeDecod){
     }
     return finalMessage;
 }
-/* Final da Função Cifra de Cesar */
+//Final da Função Cifra de Cesar.
 
 
 
-/* Base64 do w3School */
+//Base64 do https://www.w3schools.com/
 function base64 (writing, radiosCodeDecod) {
     if (radiosCodeDecod == "codificar") {
         return btoa(writing);
     } else {
         return atob(writing);
     }
-}
+};
+// Final da Base64 do https://www.w3schools.com/
 
 
 
